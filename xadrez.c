@@ -1,17 +1,29 @@
 #include <stdio.h>
 int main () {
- int B, T, R;      //B = bispo, T = torre, R = rainha
+ int T = 1;
+ int R = 1;      //B = bispo, T = torre, R = rainha, C = cavalo
+ int C = 1;
+ int B;
 
-for (B = 0; B <= 5; B++) //movimento na diagonal do Bispo
+printf ("Movimento do Bispo: \n");
+printf ("\n");
+
+for (B = 0; B < 5; B++) 
 {
     printf ("Cima, direita\n");
 }
-
-do
+printf ("\n");
+printf ("Movimento da Rainha \n");
+printf ("\n");
+ do
 {
-    printf ("Esquerda \n"); //movimento da Rainha
+    printf ("Esquerda \n"); 
     R++;
 } while (R <= 8);
+
+printf ("\n");
+printf ("Movimento da Torre \n");
+printf ("\n");
 
 do
 {
@@ -19,8 +31,18 @@ do
     T++;
 } while (T <= 5);
 
+printf ("\n");
+printf ("Movimento do Cavalo \n");
+printf ("\n");
 
-
+while (C--)
+{
+    for (int i = 0; i < 2; i++)
+    {
+        printf ("Cima\n");
+    }
+    printf ("Esquerda\n");
+}
 
 
 
